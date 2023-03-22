@@ -181,3 +181,14 @@ body {
     color: #2824C1;
 }
 
+.footer {
+    background-color: #030079;
+    color: #ffffff;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #ffffff;
+}
