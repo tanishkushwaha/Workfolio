@@ -102,6 +102,71 @@ nav .show button, nav .collapsing button {
     width: 6.8rem;
 } */
 
+.login-popup .modal-content {
+    height: 30rem;
+    border-radius: 2rem;
+}
+
+.login-popup .modal-content .modal-body h2 {
+    color: #2824C1;
+    font-weight: 600;
+}
+
+.login-popup .modal-body input[type=text], .modal-body input[type=password] {
+    padding: 0.5rem;
+    border: solid 0.5px #2824C1;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    font-size: 1.1rem;
+}
+
+.login-popup .modal-body .btn {
+    background-image: linear-gradient(to right, #7672FF, #86E9FE);
+    border-radius: 20px;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+    width: 25rem;
+    padding: 0.5rem;
+}
+
+.login-popup .modal-body .btn:active {
+    background-image: none;
+}
+
+.signup-popup .modal-content {
+    height: 38rem;
+    border-radius: 2rem;
+}
+
+.signup-popup .modal-content .modal-body h2 {
+    color: #2824C1;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.signup-popup .modal-body input[type=text], .modal-body input[type=password], .modal-body input[type=email] {
+    padding: 0.5rem;
+    border: solid 0.5px #2824C1;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    font-size: 1.1rem;
+}
+
+.signup-popup .modal-body .btn {
+    background-image: linear-gradient(to right, #7672FF, #86E9FE);
+    border-radius: 20px;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+    width: 25rem;
+    padding: 0.75rem;
+}
+
+.signup-popup .modal-body .btn:active {
+    background-image: none;
+}
+
 .landing {
     background-image: linear-gradient(to right, #7672FF, #86E9FE);
     height: 100vh;
@@ -160,14 +225,6 @@ nav .show button, nav .collapsing button {
     color: #ffffff;
 }
 
-.slide-3 {
-    
-}
-
-.slide-3-head {
-
-}
-
 .slide-3-body {
     margin-top: 6rem;
 }
@@ -195,8 +252,6 @@ nav .show button, nav .collapsing button {
     font-size: 1.1rem;
 }
 
-.slide-4-head{
-}
 
 .slide-4-body {
     height: 80px;
