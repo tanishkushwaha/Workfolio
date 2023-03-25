@@ -20,5 +20,10 @@ app.post('/', (req, res) => {
     res.redirect('/')
 })
 
+app.post('/create', (req, res) => {
+    console.log(req.body)
+    res.redirect('/')
+})
+
 
 app.listen(3000)
