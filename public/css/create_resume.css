@@ -1,0 +1,11 @@
+.head-elements {
+    width: 100%;
+}
+
+hr {
+    border: 0.1rem solid black;
+}
+
+.body .details-form textarea {
+    height: 20rem;
+}

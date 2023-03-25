@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Resume</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
+    <script src="./bootstrap-5.3.0-alpha1-dist/js/bootstrap.min.js"></script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="./css/create_resume.css">
+</head>
+<body>
+    <div class="container-fluid head">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10 d-flex">
+                <div class="d-flex brand">
+                    <h3>Workfolio</h3>
+                </div>
+                <div class="d-flex justify-content-evenly head-elements">
+                    <p>Enter your details</p>
+                    <p>Choose template</p>
+                    <p>Download resume</p>
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <hr>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+    </div>
+    <div class="container-fluid body">
+        <form action="/create" class="details-form" method="post">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-6">
+                    <h1>Enter your details</h1>
+                    <h3>Personal Details</h3>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Wanted job title</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1">
+                    </div>
+                </div>
+                <div class="col-md-5"></div>
+    
+                <div class="col-md-1"></div>
+                <div class="col-md-3">
+                    <label for="exampleInputEmail1" class="form-label">First name</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1">
+                </div>
+                <div class="col-md-3">
+                    <label for="exampleInputEmail1" class="form-label">Last name</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1">
+                </div>
+                <div class="col-md-5"></div>
+
+                <div class="col-md-1"></div>
+                <div class="col-md-3">
+                    <label for="exampleInputEmail1" class="form-label">Email</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1">
+                </div>
+                <div class="col-md-3">
+                    <label for="exampleInputEmail1" class="form-label">Phone</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1">
+                </div>
+                <div class="col-md-5"></div>
+
+                <div class="col-md-1"></div>
+                <div class="col-md-3">
+                    <label for="exampleInputEmail1" class="form-label">Country</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1">
+                </div>
+                <div class="col-md-3">
+                    <label for="exampleInputEmail1" class="form-label">City</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1">
+                </div>
+                <div class="col-md-5"></div>
+
+                <div class="col-md-1"></div>
+                <div class="col-md-3">
+                    <label for="exampleInputEmail1" class="form-label">Address</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1">
+                </div>
+                <div class="col-md-3">
+                    <label for="exampleInputEmail1" class="form-label">Postal code</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1">
+                </div>
+                <div class="col-md-5"></div>
+
+                <div class="col-md-1"></div>
+                <div class="col-md-6">
+                    <h3>Personal details</h3>
+                    <p>Write 2-4 short & energetic sentences to interest the reader! Mention your role, experience & most importantly - your biggest achievements, best qualities and skills.</p>
+                </div>
+                <div class="col-md-5"></div>
+
+                <div class="col-md-1"></div>
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                        <label for="floatingTextarea">e.g. Passionate science teacher with 8+ years of experience and a track record of...</label>
+                    </div>
+                </div>
+                <div class="col-md-5"></div>
+
+                <div class="col-md-1"></div>
+                <div class="col-md-6">
+                    <h3>Education</h3>
+                    <p>A varied education on your resume sums up  the value that your learnings and background will bring to job.</p>
+                </div>
+                <div class="col-md-5"></div>
+
+                <div class="col-md-1"></div>
+                <div class="col-md-3">
+                    <label for="exampleInputEmail1" class="form-label">School</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1">
+                </div>
+                <div class="col-md-3">
+                    <label for="exampleInputEmail1" class="form-label">Degree</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1">
+                </div>
+                <div class="col-md-5"></div>
+
+                <div class="col-md-1"></div>
+                <div class="col-md-3">
+                    <label for="exampleInputEmail1" class="form-label">Start Date</label>
+                    <input type="date" class="form-control" id="exampleInputEmail1">
+                </div>
+                <div class="col-md-3">
+                    <label for="exampleInputEmail1" class="form-label">End Date</label>
+                    <input type="date" class="form-control" id="exampleInputEmail1">
+                </div>
+                <div class="col-md-5"></div>
+
+                <div class="col-md-1"></div>
+                <div class="col-md-6">
+                    <label for="exampleInputEmail1" class="form-label">City</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1">
+                </div>
+                <div class="col-md-5"></div>
+
+                <div class="col-md-1"></div>
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                        <label for="floatingTextarea">Description (eg: Graduated with High Honors.)</label>
+                    </div>
+                </div>
+                <div class="col-md-5"></div>
+
+                <div class="col-md-1"></div>
+                <div class="col-md-6">
+                    <h3>Employment History</h3>
+                    <p>Show your relevant experience(last 10 years). Use bullet points to note your achievements, if possible use numbers/facts(Achieved X, measured by Y, by doing Z).</p>
+                </div>
+                <div class="col-md-5"></div>
+
+                <div class="col-md-1"></div>
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                        <label for="floatingTextarea">Enter here...</label>
+                    </div>
+                </div>
+                <div class="col-md-5"></div>
+
+                <div class="col-md-1"></div>
+                <div class="col-md-6">
+                    <h3>Websites & Social Links</h3>
+                    <p>You can add links to websites you want hiring managers to see! Perhaps it will be a link to your portfolio, LinkedIn profile, or personal website</p>
+                </div>
+                <div class="col-md-5"></div>
+
+                <div class="col-md-1"></div>
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                        <label for="floatingTextarea">Enter here...</label>
+                    </div>
+                </div>
+                <div class="col-md-5"></div>
+
+                <div class="col-md-1"></div>
+                <div class="col-md-3">
+                    <label for="exampleInputEmail1" class="form-label">Skills</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1">
+                </div>
+                <div class="col-md-3">
+                    <label for="exampleInputEmail1" class="form-label">Hobbies</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1">
+                </div>
+                <div class="col-md-5"></div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
