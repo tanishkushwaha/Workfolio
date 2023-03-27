@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,8 +15,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
     <!-- Styles -->
     <link rel="stylesheet" href="./css/styles.css">
@@ -33,20 +36,25 @@
             <div class="col-md-10">
                 <nav class="navbar navbar-expand-lg bg-body-tertiary">
                     <div class="container-fluid">
-                        <a class="navbar-brand" href="/"><span class="logo-part-1">Work</span><span class="logo-part-2">folio</span></a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                        <a class="navbar-brand" href="/"><span class="logo-part-1">Work</span><span
+                                class="logo-part-2">folio</span></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-                        <div class="navbar-nav">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                            <a class="nav-link" href="#">Resume</a>
-                            <a class="nav-link" href="#">Tools</a>
-                            <a class="nav-link" href="#">About</a>
-                            <button type="button" class="btn px-4" data-bs-toggle="modal" data-bs-target="#loginPopup">Log in</button>
-                            <button type="button" class="btn px-4" data-bs-toggle="modal" data-bs-target="#signupPopup">Sign up</button>
+                            <div class="navbar-nav">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                <a class="nav-link" href="/create">Create</a>
+                                <a class="nav-link" href="#">Tools</a>
+                                <a class="nav-link" href="#">About</a>
+                                <button type="button" class="btn px-4" data-bs-toggle="modal"
+                                    data-bs-target="#loginPopup">Log in</button>
+                                <button type="button" class="btn px-4" data-bs-toggle="modal"
+                                    data-bs-target="#signupPopup">Sign up</button>
+                            </div>
                         </div>
-                    </div>
                 </nav>
             </div>
             <div class="col-md-1"></div>
@@ -54,7 +62,8 @@
         <!-- Navbar Ends -->
 
         <!-- Login Popup Starts -->
-        <div class="modal fade login-popup" id="loginPopup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade login-popup" id="loginPopup" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-body d-flex flex-column justify-content-between">
@@ -67,7 +76,7 @@
                             <input type="password" name="login_password" placeholder="password">
                             <div class="d-flex justify-content-center">
                                 <button class="btn" type="submit"><span>Log in</span></button>
-                        </div>
+                            </div>
                         </form>
                         <p class="text-center">or use a social network</p>
                     </div>
@@ -80,7 +89,8 @@
         <!-- Login Popup Ends -->
 
         <!-- Signup Popup Starts -->
-        <div class="modal fade signup-popup" id="signupPopup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade signup-popup" id="signupPopup" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-body d-flex flex-column justify-content-between">
@@ -95,7 +105,8 @@
                             <input type="password" placeholder="Re-type password">
                             <div class="d-flex">
                                 <input class="form-check-input me-2" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">By signing up you agree to Term of service and Privacy Policy</label>
+                                <label class="form-check-label" for="flexCheckDefault">By signing up you agree to Term
+                                    of service and Privacy Policy</label>
                             </div>
                             <div class="d-flex justify-content-center">
                                 <button class="btn" type="submit" onclick="sendData()"><span>Sign up</span></button>
@@ -117,13 +128,16 @@
                 <h2>Create, showcase, and inspire.</h2>
                 <h2>Build your online portfolio with us.</h2>
                 <br>
-                <p>Create a resume quickly, easily, and for free with our resume maker!<br>in just minutes, build a resume to take your career to next level</p>
+                <p>Create a resume quickly, easily, and for free with our resume maker!<br>in just minutes, build a
+                    resume to take your career to next level</p>
                 <br>
                 <button onclick="goTo()" class="btn font-medium">Create My Resume</button>
                 <br><br>
                 <p class="font-medium fs-6">No credit card required</p>
-                <p class="font-medium fs-6 mt-3"><span class="material-symbols-outlined">arrow_upward</span> 30% higher chance of getting a job</p>
-                <p class="font-medium fs-6 mt-3"><span class="material-symbols-outlined">arrow_upward</span> 42% higher response rate from recruiters</p>
+                <p class="font-medium fs-6 mt-3"><span class="material-symbols-outlined">arrow_upward</span> 30% higher
+                    chance of getting a job</p>
+                <p class="font-medium fs-6 mt-3"><span class="material-symbols-outlined">arrow_upward</span> 42% higher
+                    response rate from recruiters</p>
             </div>
             <div class="col-md-5 col-sm-12">
                 <img class="object-fit-scale" src="./res/hero.svg" alt="hero.svg">
@@ -142,7 +156,7 @@
             </div>
             <div class="col-3"></div>
         </div>
-        <div class="row slide-2-body"> 
+        <div class="row slide-2-body">
             <div class="col-md-1"></div>
             <div class="col-md-2 col-sm-12">
                 <img src="./res/vector-2.svg" alt="vector-2.svg" class="object-fit-scale">
@@ -156,7 +170,7 @@
             <div class="col-md-2"></div>
             <div class="col-md-2 col-sm-12">
                 <img src="./res/vector-3.svg" alt="vector-2.svg" class="object-fit-contain mt-4">
-                <p class="mt-3">Download in the file format you need and send!</p>    
+                <p class="mt-3">Download in the file format you need and send!</p>
             </div>
             <div class="col-md-1"></div>
         </div>
@@ -183,7 +197,8 @@
             <div class="col-md-1"></div>
             <div class="col-md-5 col-sm-12 d-flex flex-column justify-content-center">
                 <h4>Attractive Resume Templates</h4>
-                <p>Go for a traditional design or satisfy your creative soul. Change colours and pick a layout that fits your needs.</p>
+                <p>Go for a traditional design or satisfy your creative soul. Change colours and pick a layout that fits
+                    your needs.</p>
             </div>
             <div class="col-md-6 col-sm-12">
                 <img src="./res/vector-4.svg" alt="vector-4" class="object-fit-contain">
@@ -197,7 +212,8 @@
             </div>
             <div class="col-md-5 col-sm-12 d-flex flex-column justify-content-center">
                 <h4>Advice from Experts</h4>
-                <p>Achieve success with less effort. Let the resume generator guide your writing and save your energy to build a career you’ve always dreamt of.</p>
+                <p>Achieve success with less effort. Let the resume generator guide your writing and save your energy to
+                    build a career you’ve always dreamt of.</p>
             </div>
             <div class="col-md-1"></div>
         </div>
@@ -206,7 +222,8 @@
             <div class="col-md-1"></div>
             <div class="col-md-5 col-sm-12 d-flex flex-column justify-content-center">
                 <h4>Editor with Ready-Made Content</h4>
-                <p>Get inspiration from expert-recommended examples if you hit writer’s block. Use them to complete your resume and let us take care of the rest.</p>
+                <p>Get inspiration from expert-recommended examples if you hit writer’s block. Use them to complete your
+                    resume and let us take care of the rest.</p>
             </div>
             <div class="col-md-6 col-sm-12">
                 <img src="./res/vector-6.svg" alt="vector-4" class="object-fit-contain">
@@ -220,7 +237,8 @@
             </div>
             <div class="col-md-5 col-sm-12 d-flex flex-column justify-content-center">
                 <h4>Matching Cover Letter</h4>
-                <p>Convince hiring managers to set up an interview with you with a cover letter that completes your job application. All you need is your resume. The rest is magic.</p>
+                <p>Convince hiring managers to set up an interview with you with a cover letter that completes your job
+                    application. All you need is your resume. The rest is magic.</p>
             </div>
             <div class="col-md-1"></div>
         </div>
@@ -234,7 +252,9 @@
             <div class="col-6 text-center">
                 <h2 class="font-medium">Create the best resume online.</h2>
                 <br>
-                <p>No need to start from zero! Resume building is easy with our preformatted resume templates, which are optimized for applicant tracking systems (ATS). Choose a style that works for you, from modern to professional and basic resumes. Customize in our Resume Builder and finish in just a few clicks.</p>
+                <p>No need to start from zero! Resume building is easy with our preformatted resume templates, which are
+                    optimized for applicant tracking systems (ATS). Choose a style that works for you, from modern to
+                    professional and basic resumes. Customize in our Resume Builder and finish in just a few clicks.</p>
             </div>
             <div class="col-3"></div>
         </div>
@@ -252,11 +272,13 @@
                             <img src="./res/vector-10.svg" class="d-block object-fit-contain" alt="...">
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide"
+                        data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide"
+                        data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
@@ -267,7 +289,7 @@
             <div class="col-12 text-center">
                 <h5 class="font-semibold">STANDOUT</h5>
                 <p class="font-semibold">Lead the recruiter down your qualification with this easy-to-read design</p>
-            </div> 
+            </div>
         </div>
     </div>
     <!-- Slide-4 Ends -->
@@ -284,19 +306,35 @@
             <div class="col-md-1"></div>
             <div class="col-md-8">
                 <h4>Do I need a different resume for every different job application?</h4>
-                <p>Every time you apply for a new job, you should make sure the resume speaks directly to the job description. That means, your resume may not need to be entirely different, but you’ll likely want to make at least a few minor updates. If you’re applying for a different type of job, you may want a completely different resume, from the content all the way to the format. With all the different templates to choose from, take advantage of our resume builder and create a variety of resumes to fit both your personality and your different job applications.</p>
+                <p>Every time you apply for a new job, you should make sure the resume speaks directly to the job
+                    description. That means, your resume may not need to be entirely different, but you’ll likely want
+                    to make at least a few minor updates. If you’re applying for a different type of job, you may want a
+                    completely different resume, from the content all the way to the format. With all the different
+                    templates to choose from, take advantage of our resume builder and create a variety of resumes to
+                    fit both your personality and your different job applications.</p>
                 <hr>
                 <h4>How do I choose the right resume template?</h4>
-                <p>Choosing the right resume template mostly comes down to personal preference. Granted, if you’re applying for a job in finance, you may not want an abstract-leaning format like a graphic designer may use. So, as you browse through all the resume templates while you build your resume, think about what potential employers may expect to see, then pick the resume that fits both your personality and career goals.</p>
+                <p>Choosing the right resume template mostly comes down to personal preference. Granted, if you’re
+                    applying for a job in finance, you may not want an abstract-leaning format like a graphic designer
+                    may use. So, as you browse through all the resume templates while you build your resume, think about
+                    what potential employers may expect to see, then pick the resume that fits both your personality and
+                    career goals.</p>
                 <hr>
                 <h4>Free resume builder doesn’t usually mean free. Does Workfolio sell my information</h4>
-                <p>Absolutely not. Our resume builder is completely free. From creating an account to uploading your resume to downloading and printing, you’ll never pay a dime. Your information is all secure and we will not sell to anyone.</p>
+                <p>Absolutely not. Our resume builder is completely free. From creating an account to uploading your
+                    resume to downloading and printing, you’ll never pay a dime. Your information is all secure and we
+                    will not sell to anyone.</p>
                 <hr>
                 <h4>What does ATS-friendly mean?</h4>
-                <p>ATS stands for Applicant Tracking System. An ATS is generally used by employers to process resumes. Most likely, when you’ve applied for jobs, they’ve asked you to upload a resume that you then have to painstakingly update. ATS-friendly means our resumes are ready to go through an ATS correctly so you don’t have to worry about reuploading all the same information.</p>
+                <p>ATS stands for Applicant Tracking System. An ATS is generally used by employers to process resumes.
+                    Most likely, when you’ve applied for jobs, they’ve asked you to upload a resume that you then have
+                    to painstakingly update. ATS-friendly means our resumes are ready to go through an ATS correctly so
+                    you don’t have to worry about reuploading all the same information.</p>
                 <hr>
                 <h4>Can I have my resume reviewed when I’ve finished building?</h4>
-                <p>Not only can you, you should! It’s always a great idea to get another set of eyes on your resume to check for typos, mistakes, or areas for improvement. Our resume builder will provide tips and advice throughout and when you’re done, you can run through our automated resume reviewer.</p>
+                <p>Not only can you, you should! It’s always a great idea to get another set of eyes on your resume to
+                    check for typos, mistakes, or areas for improvement. Our resume builder will provide tips and advice
+                    throughout and when you’re done, you can run through our automated resume reviewer.</p>
                 <br>
             </div>
             <div class="col-md-3"></div>
@@ -372,4 +410,5 @@
     </div>
     <!-- Footer Ends -->
 </body>
+
 </html>

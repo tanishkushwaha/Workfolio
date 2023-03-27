@@ -43,6 +43,11 @@ body {
     margin-right: 1rem;
 }
 
+
+.nav-link:focus:not(:hover) {
+    color: #7672FF;
+}
+
 .navbar-nav button {
     background-color: #7B98FF;
     color: #ffffff;
@@ -284,7 +289,7 @@ nav .collapsing button {
         'wght' 600,
         'GRAD' 0,
         'opsz' 48;
-    
+
     position: relative;
     top: 0.3rem;
     color: #FD7E47;
