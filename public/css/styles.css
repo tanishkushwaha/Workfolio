@@ -277,3 +277,15 @@ nav .collapsing button {
     text-decoration: none;
     color: #ffffff;
 }
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 600,
+        'GRAD' 0,
+        'opsz' 48;
+    
+    position: relative;
+    top: 0.3rem;
+    color: #FD7E47;
+}
