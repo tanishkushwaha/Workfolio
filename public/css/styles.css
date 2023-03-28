@@ -114,6 +114,10 @@ nav .collapsing button {
     color: black;
 }
 
+.login-popup svg {
+    cursor: pointer;
+}
+
 .signup-popup .modal-content {
     height: 38rem;
     border-radius: 2rem;
