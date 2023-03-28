@@ -1,3 +1,3 @@
-const goTo = () => {
-    window.location = '/create'
+const goTo = (link) => {
+    window.location = link
 }
