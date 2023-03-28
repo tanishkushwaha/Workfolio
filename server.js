@@ -49,6 +49,10 @@ app.get('/', (req, res) => {
     res.render('index.ejs')
 })
 
+app.get('/dummy_page', (req, res) => {
+    res.render('dummy_page.ejs')
+})
+
 app.get('/create', (req, res) => {
     res.render('create_resume.ejs')
 })
