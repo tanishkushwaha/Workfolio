@@ -1,16 +1,25 @@
+import { Routes, Route } from 'react-router-dom'
+
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button, Stack } from 'react-bootstrap';
+import './App.css'
+
+import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import Login from './pages/Login';
+import Register from './pages/Register';
 
 const App = () => {
   return (
-    <Stack direction="horizontal" gap={2}>
-      <Button as="a" variant="primary">
-        Button as link
-      </Button>
-      <Button as="a" variant="success">
-        Button as link
-      </Button>
-    </Stack>
+    <>
+      <Navbar />
+
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/register' element={<Register />} />
+        <Route path='/login' element={<Login />} />
+      </Routes>
+
+    </>
   )
 }
 
