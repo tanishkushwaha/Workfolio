@@ -1,6 +1,14 @@
+import { useNavigate } from "react-router-dom"
 import hero_svg from "../assets/hero.svg"
 
 const Hero = () => {
+
+  const navigate = useNavigate()
+
+  const handleButton = () => {
+    navigate('/create')
+  }
+
   return (
     <div className="container-fluid landing">
       <div className="row landing-content">
@@ -12,7 +20,7 @@ const Hero = () => {
           <p>Create a resume quickly, easily, and for free with our resume maker!<br />in just minutes, build a
             resume to take your career to next level</p>
           <br />
-          <button className="btn font-medium">Create My Resume</button>
+          <button className="btn font-medium" onClick={handleButton}>Create My Resume</button>
           <br /><br />
           <p className="font-medium fs-6">No credit card required</p>
           <p className="font-medium fs-6 mt-3"><span className="material-symbols-outlined">arrow_upward</span> 30% higher

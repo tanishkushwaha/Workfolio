@@ -1,8 +1,18 @@
+import { useNavigate } from "react-router-dom"
+
 import vector_1 from "../assets/vector-1.svg"
 import vector_2 from "../assets/vector-2.svg"
 import vector_3 from "../assets/vector-3.svg"
 
+
 const Section_1 = () => {
+
+  const navigate = useNavigate()
+
+  const handleButton = () => {
+    navigate('/create')
+  }
+
   return (
     <div className="container-fluid font-poppins slide-2">
       <div className="row slide-2-head">
@@ -33,7 +43,7 @@ const Section_1 = () => {
       <div className="row slide-2-button">
         <div className="col-md-5"></div>
         <div className="col-md-2 col-sm-12">
-          <button className="btn px-4 font-medium">Build My Resume</button>
+          <button className="btn px-4 font-medium" onClick={handleButton}>Build My Resume</button>
         </div>
         <div className="col-md-5"></div>
       </div>
