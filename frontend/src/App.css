@@ -123,28 +123,26 @@ nav .collapsing button {
   border-radius: 2rem;
 }
 
-.signup-popup .modal-content .modal-body h2 {
+.auth-form h1 {
   color: #2824C1;
   font-weight: 600;
   margin-bottom: 2rem;
 }
 
-.signup-popup form {
-  height: 70%;
-}
-
-.signup-popup .modal-body input[type=text],
-.modal-body input[type=password],
-.modal-body input[type=email] {
+.auth-form input[type=text],
+.auth-form input[type=password],
+.auth-form input[type=email] {
   padding: 0.5rem;
   border: solid 0.5px #2824C1;
   border-radius: 0.5rem;
   padding: 0.75rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  width: auto;
 }
 
-.signup-popup .modal-body .btn {
+.auth-form button {
   background-image: linear-gradient(to right, #7672FF, #86E9FE);
+  color: white;
   border-radius: 20px;
   font-size: 1.1rem;
   font-weight: 500;
@@ -152,15 +150,8 @@ nav .collapsing button {
   padding: 0.75rem;
 }
 
-.signup-popup .modal-body .btn span {
-  color: white;
-}
-
-.signup-popup .modal-body .btn:active {
+.auth-form button:active {
   background-image: none;
-}
-
-.signup-popup .modal-body .btn:active span {
   color: black;
 }
 
