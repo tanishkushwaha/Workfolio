@@ -1,5 +1,17 @@
+import { Link, useNavigate } from "react-router-dom"
 
 const Navbar = () => {
+
+  const navigate = useNavigate();
+
+  const handleLoginButton = () => {
+    navigate('/login')
+  }
+
+  const handleSignupButton = () => {
+    navigate('/register')
+  }
+
   return (
     <div className="row fixed-top">
       <div className="col-md-1"></div>
@@ -15,14 +27,12 @@ const Navbar = () => {
             </button>
             <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
               <div className="navbar-nav">
-                <a className="nav-link active" aria-current="page" href="#">Home</a>
-                <a className="nav-link" href="/create">Create</a>
+                <Link className="nav-link active" aria-current="page" to="/">Home</Link>
+                <Link className="nav-link" to="/create">Create</Link>
                 <a className="nav-link" href="/dummy_page">Tools</a>
-                <a className="nav-link" href="#">About</a>
-                <button type="button" className="btn px-4" data-bs-toggle="modal"
-                  data-bs-target="#loginPopup">Log in</button>
-                <button type="button" className="btn px-4" data-bs-toggle="modal"
-                  data-bs-target="#signupPopup">Sign up</button>
+                <Link className="nav-link" to="/about">About</Link>
+                <button type="button" className="btn px-4" onClick={handleLoginButton}>Log in</button>
+                <button type="button" className="btn px-4" onClick={handleSignupButton}>Sign up</button>
               </div>
             </div>
           </div>
