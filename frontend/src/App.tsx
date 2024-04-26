@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
+import axios from 'axios';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
@@ -10,6 +11,12 @@ import Register from './pages/Register';
 import Create from './pages/Create';
 
 const App = () => {
+
+  const axiosInstance = axios.create({
+    withCredentials: true,
+    baseURL: 'http://localhost:8080/api'
+  })
+
   return (
     <>
       <Navbar />
