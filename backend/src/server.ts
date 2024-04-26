@@ -1,4 +1,4 @@
-import express from "express";
+import express, { Request, Response } from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
@@ -15,23 +15,28 @@ dotenv.config();
 const app = express();
 
 // Middlewares
-app.use(cors());
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+    credentials: true,
+  })
+);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 // Routes
-app.use("/register", signupRoute);
-app.use("/login", loginRoute);
-app.use("/logout", logoutRoute);
-app.use("/userresume", userResumeRoute);
+app.use("/api/register", signupRoute);
+app.use("/api/login", loginRoute);
+app.use("/api/logout", logoutRoute);
+app.use("/api/userresume", userResumeRoute);
 
-app.get("/", (req, res) => {
+app.get("/", (req: Request, res: Response) => {
   res.send("Workfolio!");
 });
 
-app.get("/restricted", auth, (req, res) => {
-  res.send({ message: "Welcome to the Restricted Area!" });
+app.get("/api/restricted", auth, (req: Request, res: Response) => {
+  res.status(200).send({ message: "Welcome to the Restricted Area!" });
 });
 
 mongoose
