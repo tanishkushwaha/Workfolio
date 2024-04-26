@@ -43,10 +43,11 @@ router.post("/", async (req: Request, res: Response) => {
     const options: CookieOptions = {
       expires: new Date(Date.now() + 24 * 60 * 60 * 1000),
       httpOnly: true,
+      path: "/",
     };
     return res
       .status(200)
-      .cookie("token", userToken)
+      .cookie("token", userToken, options)
       .send({ message: "Login successful.", token: userToken });
   } catch (error) {
     console.log(error);
