@@ -12,11 +12,6 @@ import Create from './pages/Create';
 
 const App = () => {
 
-  const axiosInstance = axios.create({
-    withCredentials: true,
-    baseURL: 'http://localhost:8080/api'
-  })
-
   return (
     <>
       <Navbar />
