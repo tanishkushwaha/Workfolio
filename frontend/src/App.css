@@ -1,3 +1,8 @@
+:root {
+  --primary-color: #616FFF;
+  --secondary-color: #4BB3FD;
+}
+
 .font-semibold {
   font-weight: 600;
 }
@@ -288,4 +293,18 @@ nav .collapsing button {
   position: relative;
   top: 0.3rem;
   color: #FD7E47;
+}
+
+.choose-template-container {
+  margin-top: 10rem;
+}
+
+h1 {
+  color: var(--primary-color);
+}
+
+.template-card {
+  background-color: #ccc;
+  border-radius: 1rem;
+  height: 12rem;
 }
