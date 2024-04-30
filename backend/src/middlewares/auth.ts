@@ -1,10 +1,7 @@
 import { Request, Response, NextFunction } from "express";
 import jwt, { JwtPayload } from "jsonwebtoken";
 import User from "../models/user";
-
-interface ExtendedRequest extends Request {
-  user?: JwtPayload;
-}
+import ExtendedRequest from "../utils/ExtendedRequest";
 
 const auth = async (
   req: ExtendedRequest,
@@ -25,13 +22,14 @@ const auth = async (
       );
 
       if (typeof decode !== "string" && decode.id) {
-        const userExists = await User.findById(decode.id);
+        const user = await User.findById(decode.id);
 
-        if (!userExists) {
+        if (!user) {
           return res.status(401).send({ message: "Invalid token id" });
         }
 
-        req.user = decode;
+        user.password = "";
+        req.user = user;
       }
     } catch (JsonWebTokenError) {
       return res.status(401).send({ message: "Invalid token." });
