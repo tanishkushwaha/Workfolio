@@ -8,6 +8,7 @@ import userResumeRoute from "./routes/userResumeRoute";
 import signupRoute from "./routes/registerRoute";
 import loginRoute from "./routes/loginRoute";
 import logoutRoute from "./routes/logoutRoute";
+import userRoute from "./routes/userRoute";
 import auth from "./middlewares/auth";
 
 dotenv.config();
@@ -30,6 +31,7 @@ app.use("/api/register", signupRoute);
 app.use("/api/login", loginRoute);
 app.use("/api/logout", logoutRoute);
 app.use("/api/userresume", userResumeRoute);
+app.use("/api/user", userRoute);
 
 app.get("/", (req: Request, res: Response) => {
   res.send("Workfolio!");
