@@ -1,7 +1,9 @@
-import { Link, useNavigate } from "react-router-dom"
+import { NavLink, useNavigate } from "react-router-dom"
+import axiosInstance from "../utils/axiosInstance";
+import { useAuth } from "../contexts/AuthContext";
 
 const Navbar = () => {
-
+  const { isLoggedIn, setIsLoggedIn } = useAuth()
   const navigate = useNavigate();
 
   const handleLoginButton = () => {
@@ -10,6 +12,20 @@ const Navbar = () => {
 
   const handleSignupButton = () => {
     navigate('/register')
+  }
+
+  const handleLogout = () => {
+    axiosInstance.post('/logout')
+      .then(res => {
+        if (res.status === 200) {
+          setIsLoggedIn(false)
+          navigate('/')
+        }
+      })
+      .catch(err => {
+        console.log(err);
+
+      })
   }
 
   return (
@@ -27,19 +43,23 @@ const Navbar = () => {
             </button>
             <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
               <div className="navbar-nav">
-                <Link className="nav-link active" aria-current="page" to="/">Home</Link>
-                <Link className="nav-link" to="/create">Create</Link>
-                <a className="nav-link" href="/dummy_page">Tools</a>
-                <Link className="nav-link" to="/about">About</Link>
-                <button type="button" className="btn px-4" onClick={handleLoginButton}>Log in</button>
-                <button type="button" className="btn px-4" onClick={handleSignupButton}>Sign up</button>
+                <NavLink className="nav-link" to="/">Home</NavLink>
+                <NavLink className="nav-link" to="/create">Create</NavLink>
+                <NavLink className="nav-link" to="/about">About</NavLink>
+                {!isLoggedIn ? (
+                  <>
+                    <button type="button" className="btn px-4" onClick={handleLoginButton}>Log in</button>
+                    <button type="button" className="btn px-4" onClick={handleSignupButton}>Sign up</button>
+                  </>
+                ) : (<button type="button" className="btn px-4" onClick={handleLogout}>Logout</button>)}
+
               </div>
             </div>
           </div>
         </nav>
-      </div>
+      </div >
       <div className="col-md-1"></div>
-    </div>
+    </div >
   )
 }
 
