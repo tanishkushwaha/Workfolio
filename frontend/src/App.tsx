@@ -1,5 +1,4 @@
 import { Routes, Route } from 'react-router-dom'
-import axios from 'axios';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
