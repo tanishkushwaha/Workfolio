@@ -25,8 +25,6 @@ const Create = () => {
 
   }, [])
 
-
-
   return (
     <>
       {loading ? (
