@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom"
 
 import Spinner from "../components/Spinner"
 import axiosInstance from "../utils/axiosInstance"
+import { useAuth } from "../contexts/AuthContext"
 
 const Login = () => {
 
@@ -13,6 +14,7 @@ const Login = () => {
 
   const [isLoading, setIsLoading] = useState(false)
   const navigate = useNavigate()
+  const { setIsLoggedIn } = useAuth()
 
   const handleSubmit = (e: any) => {
     e.preventDefault()
@@ -28,12 +30,18 @@ const Login = () => {
         console.log(res);
 
         if (res.status === 200) {
+          setIsLoggedIn(true)
           navigate('/create')
         }
       })
 
       .catch((err) => {
         setIsLoading(false)
+
+        if (err.response.status === 401) {
+          alert("Invalid Credentials!")
+        }
+
         console.log(err);
       })
   }
