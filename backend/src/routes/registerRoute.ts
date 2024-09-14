@@ -1,6 +1,5 @@
 import express from "express";
 import bcrypt from "bcryptjs";
-// import jwt from "jsonwebtoken";
 import User from "../models/user";
 
 const router = express.Router();
@@ -39,14 +38,12 @@ router.post("/", async (req, res) => {
     const encPass = await bcrypt.hash(userDetails.password, 10);
 
     // Save into DB
-    const newUser = await User.create({
+    await User.create({
       firstName: userDetails.firstName,
       lastName: userDetails.lastName,
       password: encPass,
       email: userDetails.email,
     });
-
-    // Generate Token
 
     return res.status(200).send({ message: "User registered successfully!" });
   } catch (err) {

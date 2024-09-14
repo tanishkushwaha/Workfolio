@@ -1,44 +1,52 @@
-import { Request, Response, NextFunction } from "express";
-import jwt, { JwtPayload } from "jsonwebtoken";
+import { Response, NextFunction } from "express";
+import jwt, { JsonWebTokenError } from "jsonwebtoken";
 import User from "../models/user";
 import ExtendedRequest from "../utils/ExtendedRequest";
+
+const verifyToken = (token: string) => {
+  try {
+    return jwt.verify(token, process.env.JWT_SECRET || "SECRET");
+  } catch (error) {
+    throw new JsonWebTokenError("Invalid token.");
+  }
+};
 
 const auth = async (
   req: ExtendedRequest,
   res: Response,
-  next: NextFunction
+  next: NextFunction,
 ) => {
   try {
-    // Validate token
-    if (!req.cookies.token) {
+    const token = req.cookies.token;
+
+    if (!token) {
       return res.status(401).send({ message: "User not logged in." });
     }
 
-    // Verify token
-    try {
-      const decode = jwt.verify(
-        req.cookies.token,
-        process.env.JWT_SECRET || "SECRET"
-      );
+    const decoded = verifyToken(token);
 
-      if (typeof decode !== "string" && decode.id) {
-        const user = await User.findById(decode.id);
+    if (typeof decoded !== "string" && decoded.id) {
+      const user = await User.findById(decoded.id);
 
-        if (!user) {
-          return res.status(401).send({ message: "Invalid token id" });
-        }
-
-        user.password = "";
-        req.user = user;
+      if (!user) {
+        return res.status(401).send({ message: "Invalid token id" });
       }
-    } catch (JsonWebTokenError) {
-      return res.status(401).send({ message: "Invalid token." });
+
+      user.password = ""; // Hide password
+      req.user = user;
     }
 
     next();
   } catch (error) {
-    console.log(error);
-    return res.status(500).send({ message: error });
+    if (error instanceof JsonWebTokenError) {
+      return res.status(401).send({ message: error.message });
+    } else if (error instanceof Error) {
+      console.error(error);
+      return res.status(500).send({ message: error.message });
+    } else {
+      console.error("An unexpected error occurred");
+      return res.status(500).send({ message: "An unexpected error occurred" });
+    }
   }
 };
 

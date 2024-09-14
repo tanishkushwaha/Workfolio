@@ -1,8 +1,8 @@
-import { Router, Request, Response } from "express";
+import { Router, Response } from "express";
 
 const router = Router();
 
-router.post("/", (req: Request, res: Response) => {
+router.post("/", (_, res: Response) => {
   try {
     return res
       .status(200)

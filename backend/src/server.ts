@@ -1,4 +1,4 @@
-import express, { Request, Response } from "express";
+import express, { Response } from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
@@ -20,7 +20,7 @@ app.use(
   cors({
     origin: "http://localhost:5173",
     credentials: true,
-  })
+  }),
 );
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -33,11 +33,11 @@ app.use("/api/logout", logoutRoute);
 app.use("/api/userresume", userResumeRoute);
 app.use("/api/user", userRoute);
 
-app.get("/", (req: Request, res: Response) => {
+app.get("/", (_, res: Response) => {
   res.send("Workfolio!");
 });
 
-app.get("/api/restricted", auth, (req: Request, res: Response) => {
+app.get("/api/restricted", auth, (_, res: Response) => {
   res.status(200).send({ message: "Welcome to the Restricted Area!" });
 });
 
